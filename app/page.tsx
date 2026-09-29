@@ -1,7 +1,9 @@
-import Image from "next/image";
+import MenuSuperior from "./../components/menuSuperior";
 
 export default function Home() {
   return (
-    <></>
+    <div>
+      <MenuSuperior />
+    </div>
   );
 }

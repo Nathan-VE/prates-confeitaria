@@ -1,1 +1,74 @@
 @import "tailwindcss";
+
+/*Variáveis tailwindcss com a palheta do projeto. A.: Nathan V. Esposito*/
+:root {
+  --cor-azul-principal: #8ebddf;
+  --cor-azul-secundario: #c7ccd8;
+
+  --cor-rosa-principal: #cb5678;
+  --cor-rosa-secundario: #dda8b5;
+
+  --cor-marrom: #624b3c;
+}
+
+/*Variáveis css do projeto. A.: Nathan V. Esposito*/
+@theme {
+
+  /*Fonte*/
+  --font-cormorant: "Cormorant Garamond", serif;
+
+  /*Palheta de cores*/
+  --color-azul-principal: var(--cor-azul-principal);
+  --color-azul-secundario: var(--cor-azul-secundario);
+  --color-rosa-principal: var(--cor-rosa-principal);
+  --color-rosa-secundario: var(--cor-rosa-secundario);
+  --color-marrom: var(--cor-marrom);
+
+  /*Breakpoints personalizados para cada tamanho de tela*/
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+}
+
+/*Elimina margin e padding padrões de TODOS os copmponentes. A.: Nathan V. Esposito*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Font moderna e elegante. A.: Nathan V. Esposito*/
+body {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*ScrollBar customizada com um visaual minimalista. A.: Nathan V. Esposito*/
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(120, 120, 120, 0.3);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(120, 120, 120, 0.5);
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(120, 120, 120, 0.3) transparent;
+}
