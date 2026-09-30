@@ -77,11 +77,11 @@ export default function MenuSuperior() {
     }
     return (
         <div
-            className={`${(isMobile || isTablet) && !aberto ? "fixed top-0 left-0 z-50" : ""} flex w-full flex-col border-b border-white/5 backdrop-blur-[2px] shadow-[0_8px_30px_rgba(0,0,0,0.08)]`}
+            className={`${(isMobile || isTablet) && !aberto ? "fixed top-0 left-0 z-50" : ""} flex w-full flex-col border-b border-rosa-secundario/5 backdrop-blur-[2px] shadow-[0_0_7px_var(--cor-marrom)]`}
         >
             {!aberto && (<FaixaAviso texto={"Conheça nossas sobremesas, salgados, bolos e muitas outras delícias. TODAS feitas com muito amor e qualidade!"} />)}
 
-            <header className={` ${(isMobile || isTablet) && !aberto ? "" : "fixed top-0 left-0 z-60 p-[20px_15px_0] h-screen bg-rosa-secundario"} flex flex-row items-center justify-center w-full p-[15px] backdrop-blur-[3px]`}>
+            <header className={` ${(isMobile || isTablet) && !aberto ? "" : "fixed top-0 left-0 z-60 p-[20px_15px_0] h-screen bg-rosa-secundario"} flex flex-row items-center justify-center w-full p-[15px] backdrop-blur-[3px] bg-rosa-principal/10`}>
                 {(isMobile || isTablet) && !aberto && (<MenuMobileFechado onClick={() => setAberto(true)} />)}
                 {(isMobile || isTablet) && aberto && (<MenuMobileAberto onClick={() => setAberto(false)} />)}
             </header>
