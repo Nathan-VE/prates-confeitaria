@@ -43,27 +43,27 @@ export default function MenuSuperior() {
                     {/*Esse ícone só está sendo instanciado para podermos centralizar a logo corretamente no header*/}
                     <IconXFilled size={32} className='opacity-0' />
                 </div>
-                <div className='bg-rosa-principal flex flex-1 flex-col w-full p-[25px_35px] gap-[20px] text-[15px] font-semibold font-sans text-azul-secundario mb-[15px] rounded-[25px] border-1 border-marrom/20 shadow-[0_0_15px_var(--cor-marrom)]'>
+                <div className='bg-rosa-principal flex flex-1 flex-col w-full p-[25px_35px] gap-[20px] text-[15px] font-semibold font-sans text-azul-secundario mb-[15px] rounded-[25px] border-marrom shadow-[0_0_15px_var(--cor-marrom)]'>
                     <a href="">
-                        <div className='flex w-full hover:text-rosa-principal border-b'>
+                        <div className='flex w-full hover:text-rosa-secundario border-b'>
                             <h3 className=''>. Quem somos</h3>
                         </div>
                     </a>
 
                     <a href="">
-                        <div className='flex w-full hover:text-rosa-principal border-b'>
-                            <h3 className=''>. Cardápio & Pedido</h3>
+                        <div className='flex w-full hover:text-rosa-secundario border-b'>
+                            <h3 className=''>. Cardápio & Pedidos</h3>
                         </div>
                     </a>
 
                     <a href="">
-                        <div className='flex w-full hover:text-rosa-principal border-b'>
+                        <div className='flex w-full hover:text-rosa-secundario border-b'>
                             <h3 className=''>. Gosto popular</h3>
                         </div>
                     </a>
 
                     <a href="">
-                        <div className='flex w-full hover:text-rosa-principal border-b'>
+                        <div className='flex w-full hover:text-rosa-secundario border-b'>
                             <h3 className=''>. Localização</h3>
                         </div>
                     </a>                    

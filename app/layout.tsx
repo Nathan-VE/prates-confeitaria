@@ -10,7 +10,7 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Confeitaria Prates",
+  title: "Prates Confeitaria",
   description: "Site oficial da Prates Confeitaria, uma confeitaria especializada em bolos, doces e sobremesas artesanais. Descubra nossas deliciosas criações e encomende online.",
 };
 
