@@ -2,8 +2,11 @@ import MenuSuperior from "./../components/menuSuperior";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <MenuSuperior />
-    </div>
+      <section className="flex h-screen w-full flex-col bg-[url('/hero/hero.png')] bg-cover bg-center bg-norepeat">
+        
+      </section>
+    </>
   );
 }
