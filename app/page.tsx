@@ -1,12 +1,16 @@
+import QuemSomos from "@/components/quemSomos";
 import MenuSuperior from "./../components/menuSuperior";
+import Hero from "@/components/hero";
 
 export default function Home() {
   return (
     <>
       <MenuSuperior />
-      <section className="flex h-screen w-full flex-col bg-[url('/hero/hero.png')] bg-cover bg-center bg-norepeat">
+      <Hero />
+      <main>
         
-      </section>
+        {/*<QuemSomos /> */}
+      </main>
     </>
   );
 }

@@ -81,7 +81,7 @@ export default function MenuSuperior() {
         >
             {!aberto && (<FaixaAviso texto={"Conheça nossas sobremesas, salgados, bolos e muitas outras delícias. TODAS feitas com muito amor e qualidade!"} />)}
 
-            <header className={` ${(isMobile || isTablet) && !aberto ? "" : "fixed top-0 left-0 z-60 p-[20px_15px_0] h-screen bg-rosa-secundario"} flex flex-row items-center justify-center w-full p-[15px] backdrop-blur-[3px] bg-rosa-principal/10`}>
+            <header className={` ${(isMobile || isTablet) && !aberto ? "" : "fixed top-0 left-0 z-60 p-[20px_15px_0] h-screen !bg-rosa-secundario"} flex flex-row items-center justify-center w-full p-[15px] backdrop-blur-[3px] bg-white/20`}>
                 {(isMobile || isTablet) && !aberto && (<MenuMobileFechado onClick={() => setAberto(true)} />)}
                 {(isMobile || isTablet) && aberto && (<MenuMobileAberto onClick={() => setAberto(false)} />)}
             </header>

@@ -1,7 +1,8 @@
 export default function QuemSomos() {
     return (
-        <div className="flex flex-col items-center justify-center w-full h-full bg-azul-secundario ">
-            {/* IMAGEM */}
+        {/*
+            <div className="flex flex-col items-center justify-center w-full h-full bg-azul-secundario ">
+          
             <div className="">
                 <h1>Quem somos?</h1>
             </div>
@@ -16,5 +17,6 @@ export default function QuemSomos() {
 
             </div>
         </div>
+            */}
     )
 }
