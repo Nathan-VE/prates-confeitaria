@@ -9,6 +9,7 @@
   --cor-rosa-secundario: #dda8b5;
 
   --cor-marrom: #624b3c;
+  --cor-roxo: #c69fe3;
 }
 
 /*Variáveis css do projeto. A.: Nathan V. Esposito*/
@@ -23,18 +24,29 @@
   --color-rosa-principal: var(--cor-rosa-principal);
   --color-rosa-secundario: var(--cor-rosa-secundario);
   --color-marrom: var(--cor-marrom);
+  --color-roxo: var(--cor-roxo);
 
   /*Breakpoints personalizados para cada tamanho de tela*/
   --breakpoint-mobile: 480px;
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
+
+  /*Animação para a faixa de aviso acima do header*/
+   --animate-letreiro: letreiro 12s linear infinite;
+
+  @keyframes letreiro {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
-/*Elimina margin e padding padrões de TODOS os copmponentes. A.: Nathan V. Esposito*/
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 /*Font moderna e elegante. A.: Nathan V. Esposito*/
