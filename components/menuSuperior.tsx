@@ -46,7 +46,7 @@ export default function MenuSuperior() {
             <div className="relative flex h-dvh w-full flex-col items-center justify-start overflow-hidden p-[20px] text-rosa-principal">
 
                 {/* FUNDO DESFOCADO */}
-                <div className="absolute inset-0 -z-10 scale-110 bg-[url('/imagens/fundo-estampado.png')] bg-cover bg-center bg-no-repeat blur-[1px]" />
+                <div className="absolute inset-0 -z-10 scale-110 bg-rosa-secundario blur-[1px]" />
 
                 {/* HEADER DO MENU */}
                 <div className="mb-[60px] flex w-full flex-row items-start justify-between">
@@ -114,7 +114,7 @@ export default function MenuSuperior() {
                 </div>
 
                 {/* RODAPÉ */}
-                <div className="flex w-full items-center justify-center border-t border-marrom p-[15px] text-[12px] font-bold text-marrom">
+                <div className="flex w-full items-center justify-center border-t border-marrom p-[15px] text-[10px] font-semibold text-marrom">
                     <p>
                         Prates Confeitaria - @{obterAnoAtual()} todos os direitos reservados
                     </p>
