@@ -32,9 +32,19 @@ export default function MenuSuperior() {
     function MenuMobileAberto({ onClick }: MenuMobileType) {
 
         return (
-            <div className='flex flex-col items-center justify-start w-full h-full bg-rosa-secundario text-rosa-principal z-50'>
-                <div className='flex flex-row items-start justify-between w-full mb-[60px]'>
-                    <div onClick={onClick} className='mt-[10px]'>
+            <div className="relative flex h-dvh w-full flex-col items-center justify-start overflow-hidden p-[20px] text-rosa-principal">
+
+                {/* FUNDO DESFOCADO */}
+                <div className="absolute inset-0 -z-10 scale-110 bg-[url('/imagens/fundo-estampado.png')] bg-cover bg-center bg-no-repeat blur-[1px]" />
+
+                {/* HEADER DO MENU */}
+                <div className="mb-[60px] flex w-full flex-row items-start justify-between">
+
+                    {/* BOTÃO FECHAR */}
+                    <div
+                        onClick={onClick}
+                        className="mt-[10px] cursor-pointer"
+                    >
                         <IconXFilled size={32} />
                     </div>
                     <div className='flex items-center justify-center w-[90px] h-[40px] pt-[40px]'>
@@ -69,8 +79,48 @@ export default function MenuSuperior() {
                     </a>                    
                 </div>
 
-                <div className='flex items-center justify-center w-full border-t border-marrom p-[15px] text-[11px] text-marrom font-semibold'>
-                    <p>Prates Confeitaria - @{obterAnoAtual()} todos os direitos reservados</p>
+                {/* OPÇÕES DO MENU */}
+                <div className="mb-[15px] flex w-full flex-1 flex-col gap-[20px] rounded-[25px] border-marrom bg-rosa-principal p-[25px_35px] font-sans text-[15px] font-semibold text-azul-secundario shadow-[0_0_15px_var(--cor-marrom)]">
+
+                    <a href="">
+                        <div className="flex w-full border-b hover:text-rosa-secundario">
+                            <h3>
+                                . Quem somos
+                            </h3>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div className="flex w-full border-b hover:text-rosa-secundario">
+                            <h3>
+                                . Cardápio & Pedidos
+                            </h3>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div className="flex w-full border-b hover:text-rosa-secundario">
+                            <h3>
+                                . Gosto popular
+                            </h3>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div className="flex w-full border-b hover:text-rosa-secundario">
+                            <h3>
+                                . Contato
+                            </h3>
+                        </div>
+                    </a>
+
+                </div>
+
+                {/* RODAPÉ */}
+                <div className="flex w-full items-center justify-center border-t border-marrom p-[15px] text-[12px] font-bold text-marrom">
+                    <p>
+                        Prates Confeitaria - @{obterAnoAtual()} todos os direitos reservados
+                    </p>
                 </div>
             </div>
         )
