@@ -32,7 +32,7 @@ export default function MenuSuperior() {
     function MenuMobileAberto({ onClick }: MenuMobileType) {
 
         return (
-            <div className='flex flex-col items-center justify-start w-full h-full bg-rosa-secundario text-rosa-principal'>
+            <div className='flex flex-col items-center justify-start w-full h-full bg-rosa-secundario text-rosa-principal z-50'>
                 <div className='flex flex-row items-start justify-between w-full mb-[60px]'>
                     <div onClick={onClick} className='mt-[10px]'>
                         <IconXFilled size={32} />
