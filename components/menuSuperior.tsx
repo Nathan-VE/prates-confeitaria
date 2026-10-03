@@ -103,7 +103,7 @@ export default function MenuSuperior() {
                     <a href="">
                         <div className="flex w-full border-b hover:text-rosa-secundario">
                             <h3>
-                                . Localização
+                                . Contato
                             </h3>
                         </div>
                     </a>
@@ -122,13 +122,13 @@ export default function MenuSuperior() {
 
     if (mobile && !aberto) {
         return (
-            <div className="fixed left-0 top-0 z-[9999] w-full">
+            <div className="fixed left-0 top-0 z-[9999] w-full bg-rosa-secundario">
 
                 <FaixaAviso
                     texto="Conheça nossas sobremesas, salgados, bolos e muitas outras delícias. TODAS feitas com muito amor e qualidade!"
                 />
 
-                <header className="flex w-full items-center justify-center border-b border-rosa-secundario/5 bg-transparent p-[15px] backdrop-blur-[15px] shadow-[0_0_7px_var(--cor-marrom)]">
+                <header className="flex w-full items-center justify-center border-b border-rosa-secundario/5 bg-transparent p-[15px] shadow-[0_0_7px_var(--cor-marrom)]">
                     <MenuMobileFechado
                         onClick={() => setAberto(true)}
                     />

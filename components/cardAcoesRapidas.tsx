@@ -1,13 +1,47 @@
 'use client'
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { IconChevronUp, IconChevronDown } from '@tabler/icons-react'
 
 export default function CardAcoesRapidas() {
     const [aberto, setAberto] = useState(false)
 
+    // animação de entrada do título
+    const [carregado, setCarregado] = useState(false)
+
+    // animação do painel (montado = existe no DOM, visivel = posição final)
+    const [painelMontado, setPainelMontado] = useState(false)
+    const [painelVisivel, setPainelVisivel] = useState(false)
+    const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+    useEffect(() => {
+        const id = requestAnimationFrame(() => setCarregado(true))
+        return () => {
+            cancelAnimationFrame(id)
+            if (timeoutRef.current) clearTimeout(timeoutRef.current)
+        }
+    }, [])
+
+    function alternar() {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current)
+
+        if (!aberto) {
+            setAberto(true)
+            setPainelMontado(true)
+            // espera o painel renderizar fora da tela antes de subir
+            requestAnimationFrame(() =>
+                requestAnimationFrame(() => setPainelVisivel(true))
+            )
+        } else {
+            setAberto(false)
+            setPainelVisivel(false)
+            // desmonta só depois da animação de descida (duration-500)
+            timeoutRef.current = setTimeout(() => setPainelMontado(false), 500)
+        }
+    }
+
     return (
         <div
-            className={`flex h-[270px] w-full flex-col text-white ${aberto ? `` : `items-center justify-between pt-[95px]`
+            className={`flex h-[270px] w-full flex-col overflow-hidden text-white ${painelMontado ? `` : `items-center justify-between pt-[95px]`
                 }`}
         >
 
@@ -34,11 +68,10 @@ export default function CardAcoesRapidas() {
                         duration-700
                         ease-out
 
-                        ${
-                            aberto
-                                ? "-translate-x-full opacity-0"
-                                : "translate-x-0 opacity-100"
-                        }
+                        ${painelMontado || !carregado
+                        ? "-translate-x-full opacity-0"
+                        : "translate-x-0 opacity-100"
+                    }
                     `}
                 >
                     <h1>
@@ -54,21 +87,36 @@ export default function CardAcoesRapidas() {
                     flex-col
                     items-center
                     justify-center
-                    ${aberto ? `flex-1` : ``}
+                    ${painelMontado ? `flex-1` : ``}
                 `}
             >
 
-                <div className="flex w-[270px] items-end justify-end">
+                <div
+                    className={`
+                        flex
+                        w-[270px]
+                        items-end
+                        justify-end
+
+                        ${painelMontado && (painelVisivel || !aberto)
+                        ? "transition-transform duration-500 ease-out"
+                        : ""}
+
+                        ${painelMontado && !painelVisivel
+                        ? "translate-y-[170px]"
+                        : "translate-y-0"}
+                    `}
+                >
                     {/* BOTÃO ABRIR / FECHAR */}
                     <button
                         className="w-[70px] rounded-[15px_15px_0_0] bg-rosa-secundario p-[3px_20px] text-marrom"
-                        onClick={() => setAberto(!aberto)}
+                        onClick={alternar}
                     >
                         {aberto ? <IconChevronDown /> : <IconChevronUp />}
                     </button>
                 </div>
 
-                {aberto && (
+                {painelMontado && (
                     <div
                         className={`
                             flex
@@ -89,14 +137,14 @@ export default function CardAcoesRapidas() {
                             duration-500
                             ease-out
 
-                            ${aberto
+                            ${painelVisivel
                                 ? "translate-y-0 opacity-100"
                                 : "pointer-events-none translate-y-full opacity-0"
                             }
                         `}
                     >
                         {/* DESCRIÇÃO */}
-                        <div className="rounded-[7px] border-white/30 p-[5px] backdrop-blur-[13px]">
+                        <div className="rounded-[7px] border-white/30 p-[5px] backdrop-blur-[13px] shadow-[0_0_7px_var(--cor-marrom)]">
                             <h3 className="text-[13px] text-marrom">
                                 <strong>Delicie-se</strong> com nossos maravilhosos{" "}
                                 <strong>bolos, salgados, cookies</strong> e
