@@ -144,21 +144,19 @@ export default function CardAcoesRapidas() {
                         `}
                     >
                         {/* DESCRIÇÃO */}
-                        <div className="rounded-[7px] border-white/30 p-[5px] backdrop-blur-[13px] shadow-[0_0_7px_var(--cor-marrom)]">
+                        <div className="rounded-[7px] border-white/30 p-[5px] bg-azul-secundario ">
                             <h3 className="text-[13px] text-marrom">
-                                <strong>Delicie-se</strong> com nossos maravilhosos{" "}
-                                <strong>bolos, salgados, cookies</strong> e
-                                <strong> muito </strong>mais!
+                                Desde<strong> 2023</strong>, criando<strong> doces momentos! 💗</strong>  Conheça nossos <strong>produtos</strong> e deixe seu dia <strong>mais doce</strong>.
                             </h3>
                         </div>
 
                         {/* BOTÕES */}
                         <div className="flex w-full flex-row items-center justify-between gap-[20px] text-[11px] font-bold">
-                            <button className="w-[100px] rounded-full bg-azul-secundario py-[12px] text-rosa-principal shadow-[0_0_7px_var(--cor-marrom)]">
+                            <button className="w-[100px] rounded-full bg-azul-secundario py-[12px] text-rosa-principal">
                                 CONTATO
                             </button>
 
-                            <button className="w-[100px] rounded-full bg-rosa-principal py-[12px] text-marrom shadow-[0_0_7px_var(--cor-marrom)]">
+                            <button className="w-[100px] rounded-full bg-rosa-principal py-[12px] text-marrom">
                                 CARDÁPIO
                             </button>
                         </div>
