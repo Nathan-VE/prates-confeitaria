@@ -132,7 +132,7 @@ export default function CardAcoesRapidas() {
                             p-[10px_20px_20px]
                             text-center
                             font-sans
-
+                            
                             transition-all
                             duration-500
                             ease-out

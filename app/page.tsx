@@ -74,9 +74,9 @@ export default function Home() {
       <Hero />
 
       <main className="flex w-full flex-col">
-        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px]">
+        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px] animate-subir motion-reduce:animate-none">
 
-          <h1 className="text-marrom text-[50px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7]">
+          <h1 className="text-marrom text-[50px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7] animate-subir pointer-events-none">
             Nossas especialidades
           </h1>
 
@@ -85,7 +85,7 @@ export default function Home() {
         </section>
 
         <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px]">
-          <CarrosselFeedbacks feedbacks={feedbacks}/>
+          <CarrosselFeedbacks feedbacks={feedbacks} />
         </section>
       </main>
     </>

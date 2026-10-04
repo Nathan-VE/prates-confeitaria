@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond } from "next/font/google";
-import "./globals.css";
+import "./style.css";
 
 const cormorantGaramond = Cormorant_Garamond({
   variable: "--font-cormorant",
