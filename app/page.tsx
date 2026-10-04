@@ -76,28 +76,16 @@ export default function Home() {
 
       <main className="flex w-full flex-col">
         <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px] animate-subir motion-reduce:animate-none">
-
           <h1 className="text-marrom text-[50px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7] animate-subir pointer-events-none">
             Nossas especialidades
           </h1>
           <ItensDestaque card={categorias} />
-
         </section>
 
-        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[30px]">
-
+        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[30px] mb-[50px]">
           <CarrosselFeedbacks feedbacks={feedbacks} />
-
         </section>
-
-        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px] bg-rosa-secundario">
-          <div className="flex w-full">
-            <h1 className="text-marrom text-[45px] w-[300px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7] animate-subir pointer-events-none">O doce sabor do Amor
-            </h1>
-            <QuemSomos />
-          </div>
-        </section>
-        <p className="text-marrom p-[10px_20px] max-w-[170px] text-[12px]">"Com mais de 3 anos de experiência, sabemos que não há igrediente mais saboroso do que o amor. " </p>
+        <QuemSomos />
       </main>
     </>
   );
