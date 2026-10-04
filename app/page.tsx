@@ -4,6 +4,7 @@ import ItensDestaque from "@/components/itensDestaque";
 import CardCategoria from "@/components/cardCategoria";
 import CarrosselFeedbacks, { Feedback } from "@/components/carrosselFeedbacks";
 import QuemSomos from "@/components/quemSomos";
+import Contato from "@/components/contato";
 
 const categorias = [
   <CardCategoria
@@ -86,6 +87,8 @@ export default function Home() {
           <CarrosselFeedbacks feedbacks={feedbacks} />
         </section>
         <QuemSomos />
+        <div className="p-[20px] bg-[url('/imagens/fundo-estampado.png')] bg-cover"></div>
+        <Contato />
       </main>
     </>
   );
