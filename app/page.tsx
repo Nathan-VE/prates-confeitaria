@@ -2,6 +2,7 @@ import MenuSuperior from "@/components/menuSuperior";
 import Hero from "@/components/hero";
 import ItensDestaque from "@/components/itensDestaque";
 import CardCategoria from "@/components/cardCategoria";
+import CarrosselFeedbacks, { Feedback } from "@/components/carrosselFeedbacks";
 
 const categorias = [
   <CardCategoria
@@ -27,6 +28,45 @@ const categorias = [
   />,
 ];
 
+const feedbacks: Feedback[] = [
+  {
+    id: "1",
+    imagem: "/itens/bolo-namorados.png",
+    textoAlternativo: "Bolo personalizado dia dos namorados.",
+    titulo: "Me fez me sentir muito amada",
+    comentario: "Eu adorei que a personalização ficou exatamente como pedi!",
+    diasAtras: 3,
+    nota: 5
+  },
+  {
+    id: "2",
+    imagem: "/itens/bolo-maes.png",
+    textoAlternativo: "",
+    titulo: "Melhor presente possível para esse dia tão especial",
+    comentario: "Muito gostoso! Estava doce na medida certa, frutas frescas e a entrega foi pontual!",
+    diasAtras: 1,
+    nota: 5
+  },
+  {
+    id: "3",
+    imagem: "/itens/coxinha.jpeg",
+    textoAlternativo: "Coxinha de frango.",
+    titulo: "Com certeza, é o melhor salgado da cidade",
+    comentario: "Não me lembro de uma coxinha tão boa como essa, crocante e MUITO recheada!",
+    diasAtras: 10,
+    nota: 5
+  },
+  {
+    id: "4",
+    imagem: "/itens/copo-felicidade.jpeg",
+    textoAlternativo: "Copo da felicidade de uva.",
+    titulo: "Feito para quem ama doce",
+    comentario: "Me senti nas nuvens, esse copo da felicidade valeu cada centavo!",
+    diasAtras: 1,
+    nota: 5
+  },
+]
+
 export default function Home() {
   return (
     <>
@@ -34,15 +74,19 @@ export default function Home() {
       <Hero />
 
       <main className="flex w-full flex-col">
-          <section className="m-[10px] flex flex-col items-center justify-center gap-[40px] rounded-2xl p-[10px] pt-[50px]">
-            
-            <h1 className="text-marrom text-[50px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7]">
-              Nossas especialidades
-            </h1>
+        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px]">
 
-            <ItensDestaque card={categorias} />
+          <h1 className="text-marrom text-[50px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7]">
+            Nossas especialidades
+          </h1>
 
-          </section>
+          <ItensDestaque card={categorias} />
+
+        </section>
+
+        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px]">
+          <CarrosselFeedbacks feedbacks={feedbacks}/>
+        </section>
       </main>
     </>
   );
