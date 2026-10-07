@@ -5,9 +5,8 @@ import { IconBrandWhatsapp, IconMail } from "@tabler/icons-react";
 /* ------------------------------------------------------------------ */
 const ENDERECO = "Rua Exemplo, 123 - Centro, Cidade - UF, 00000-000";
 
-const WHATSAPP_NUMERO = "5500900000000"; // formato: 55 + DDD + número
-const WHATSAPP_EXIBIDO = "(00) 90000-0000";
-const EMAIL = "contato@seudominio.com.br";
+const WHATSAPP_NUMERO = "5514991721976"; // formato: 55 + DDD + número
+const WHATSAPP_EXIBIDO = "(14) 99172-1976";
 
 /* ------------------------------------------------------------------ */
 /* ESTILOS COMPARTILHADOS (calendário e legenda usam as mesmas cores) */
@@ -24,12 +23,12 @@ const COR: Record<Tipo, string> = {
 /* CALENDÁRIO ESTÁTICO (semana de atendimento)                        */
 /* ------------------------------------------------------------------ */
 const SEMANA: { sigla: string; nome: string; tipo: Tipo }[] = [
-    { sigla: "S", nome: "Segunda", tipo: "semana" },
+    { sigla: "S", nome: "Segunda", tipo: "fechado" },
     { sigla: "T", nome: "Terça", tipo: "semana" },
     { sigla: "Q", nome: "Quarta", tipo: "semana" },
     { sigla: "Q", nome: "Quinta", tipo: "semana" },
     { sigla: "S", nome: "Sexta", tipo: "semana" },
-    { sigla: "S", nome: "Sábado", tipo: "sabado" },
+    { sigla: "S", nome: "Sábado", tipo: "fechado" },
     { sigla: "D", nome: "Domingo", tipo: "fechado" },
 ];
 
@@ -58,14 +57,13 @@ function Calendario() {
 }
 
 const LEGENDA: { tipo: Tipo; texto: string }[] = [
-    { tipo: "semana", texto: "12h00 às 18h00" },
-    { tipo: "sabado", texto: "10h00 às 14h00" },
+    { tipo: "semana", texto: "13h00 às 17h00" },
     { tipo: "fechado", texto: "Fechado" },
 ];
 
 function Legenda() {
     return (
-        <ul className="flex flex-row items-center justify-between gap-[8px] text-[10px] text-marrom px-[30px]">
+        <ul className="flex flex-row items-center justify-center gap-[8px] text-[10px] text-marrom px-[30px]">
             {LEGENDA.map((item) => (
                 <li key={item.tipo} className="flex items-center gap-[6px]">
                     <span
@@ -124,21 +122,13 @@ export default function Contato() {
 
                     <div className="flex flex-row gap-[10px] text-[10px]">
                         <a
-                            href={`https://wa.me/${WHATSAPP_NUMERO}`}
+                            href={`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent("Olá! Gostaria de conhecer melhor os produtos da Prates Confeitaria.")}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center gap-[8px]"
+                            className="flex items-center gap-[8px] rounded-[10px] px-[12px] py-[7px] bg-rosa-secundario"
                         >
                             <IconBrandWhatsapp size={22} stroke={1.75} className="shrink-0" aria-hidden="true" />
                             <span>{WHATSAPP_EXIBIDO}</span>
-                        </a>
-
-                        <a
-                            href={`mailto:${EMAIL}`}
-                            className="flex items-center gap-[8px]"
-                        >
-                            <IconMail size={22} stroke={1.75} className="shrink-0" aria-hidden="true" />
-                            <span className="min-w-0 break-all">{EMAIL}</span>
                         </a>
                     </div>
                 </div>
