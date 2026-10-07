@@ -77,22 +77,22 @@ export default function Home() {
       <Hero />
 
       <main className="flex w-full flex-col">
-        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px] animate-subir motion-reduce:animate-none">
+        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px] animate-subir motion-reduce:animate-none desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:px-[60px]">
           <h1 className="text-marrom text-[50px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7] animate-subir pointer-events-none">
             Nossas especialidades
           </h1>
           <ItensDestaque card={categorias} />
         </section>
 
-        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[30px] mb-[50px]">
+        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[30px] mb-[50px] desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:px-[60px]">
           <CarrosselFeedbacks feedbacks={feedbacks} />
         </section>
 
         <QuemSomos />
-          <div className="p-[20px] bg-[url('/imagens/fundo-estampado.png')] bg-cover"></div>
+          <div className="p-[20px] bg-[url('/imagens/fundo-estampado.png')] bg-cover desktop:mx-auto desktop:w-[calc(100%-120px)] desktop:max-w-[980px]"></div>
         <Contato />
       </main>
-      
+
       <footer>
         <Footer />
       </footer>

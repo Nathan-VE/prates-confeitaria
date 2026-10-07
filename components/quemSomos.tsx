@@ -42,7 +42,7 @@ function ImagemQuemSomos() {
     return (
         <div
             ref={ref}
-            className={`pointer-events-none absolute bottom-0 right-0 z-10 h-[calc(100%+20px)] transition-all duration-700 ease-out motion-reduce:transition-none ${
+            className={`pointer-events-none absolute bottom-0 right-0 z-10 h-[calc(100%+20px)] transition-all duration-700 ease-out motion-reduce:transition-none desktop:right-[60px] ${
                 visivel ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
         >
@@ -63,7 +63,7 @@ export default function QuemSomos() {
     return (
         // relative: a imagem se posiciona em relação a esta section.
         // Sem overflow-hidden, para a imagem poder vazar para cima.
-        <section className="relative flex flex-row items-center justify-center gap-[40px] tablet:gap-[60px] desktop:gap-[100px]">
+        <section className="relative flex flex-row items-center justify-center gap-[40px] tablet:gap-[60px] desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:gap-[100px] desktop:px-[60px]">
             <div className="flex w-full flex-col">
                 <div className="bg-rosa-secundario p-[20px] pt-[50px] tablet:p-[40px] tablet:pt-[70px] desktop:p-[60px] desktop:pt-[90px]">
                     <h1 className="pointer-events-none max-w-[170px] origin-bottom scale-y-[1.25] animate-subir text-[40px] font-bold leading-[0.9] tracking-tight text-marrom tablet:max-w-[320px] tablet:text-[64px] desktop:max-w-[520px] desktop:text-[96px]">
