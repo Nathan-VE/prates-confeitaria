@@ -5,6 +5,7 @@ import CardCategoria from "@/components/cardCategoria";
 import CarrosselFeedbacks, { Feedback } from "@/components/carrosselFeedbacks";
 import QuemSomos from "@/components/quemSomos";
 import Contato from "@/components/contato";
+import Footer from "@/components/footer";
 
 const categorias = [
   <CardCategoria
@@ -90,6 +91,9 @@ export default function Home() {
         <div className="p-[20px] bg-[url('/imagens/fundo-estampado.png')] bg-cover"></div>
         <Contato />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
