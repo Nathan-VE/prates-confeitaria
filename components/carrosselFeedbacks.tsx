@@ -98,7 +98,7 @@ export default function CarrosselFeedbacks({
             onFocus={() => setPausado(true)}
             onBlur={() => setPausado(false)}
         >
-            <div className="flex flex-row items-start gap-[10px] sm:gap-8">
+            <div className="flex flex-row items-start gap-[10px] tablet:gap-8 desktop:gap-14">
                 {/* Coluna da esquerda: foto do item + estrelas e dias logo abaixo.
             Não pode ser "flex": o trilho precisa ocupar 100% da coluna
             para o translateX avançar exatamente um slide por vez. */}
@@ -113,7 +113,7 @@ export default function CarrosselFeedbacks({
                                     aria-hidden={i !== indice}
                                     className="flex w-full shrink-0 flex-col items-center gap-4"
                                 >
-                                    <div className="relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl">
+                                    <div className="relative aspect-square w-full max-w-xs overflow-hidden rounded-2xl desktop:max-w-md">
                                         <Image
                                             src={feedback.imagem}
                                             alt={feedback.textoAlternativo}
@@ -125,7 +125,7 @@ export default function CarrosselFeedbacks({
 
                                     <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
                                         <div
-                                            className="flex items-center gap-0.5 [&>svg]:h-3.5 [&>svg]:w-3.5 sm:[&>svg]:h-5 sm:[&>svg]:w-5"
+                                            className="flex items-center gap-0.5 [&>svg]:h-3.5 [&>svg]:w-3.5 tablet:[&>svg]:h-5 tablet:[&>svg]:w-5 desktop:[&>svg]:h-6 desktop:[&>svg]:w-6"
                                             role="img"
                                             aria-label={`Nota ${nota} de 5`}
                                         >
@@ -142,7 +142,7 @@ export default function CarrosselFeedbacks({
                                                 />
                                             ))}
                                         </div>
-                                        <span className="text-xs text-marrom sm:text-sm">
+                                        <span className="text-xs text-marrom tablet:text-sm desktop:text-base">
                                             {formatarDias(feedback.diasAtras)}
                                         </span>
                                     </div>
@@ -153,7 +153,7 @@ export default function CarrosselFeedbacks({
                 </div>
 
                 {/* Coluna da direita: texto do cliente + linha fixa com botão e controles */}
-                <div className="flex min-w-0 flex-1 flex-col sm:gap-6">
+                <div className="flex min-w-0 flex-1 flex-col tablet:gap-6 desktop:gap-8">
                     <div className="overflow-hidden">
                         <div
                             className={CLASSE_TRILHO}
@@ -167,13 +167,13 @@ export default function CarrosselFeedbacks({
                                     aria-roledescription="slide"
                                     aria-label={`${i + 1} de ${total}`}
                                     aria-hidden={i !== indice}
-                                    className="flex w-full shrink-0 flex-col items-start gap-3 sm:gap-5"
+                                    className="flex w-full shrink-0 flex-col items-start gap-3 tablet:gap-5 desktop:gap-6"
                                 >
-                                    <h3 className="font-serif text-lg font-bold leading-tight text-rosa-principal sm:text-3xl md:text-4xl">
+                                    <h3 className="font-serif text-lg font-bold leading-tight text-rosa-principal tablet:text-3xl desktop:text-5xl">
                                         {feedback.titulo}
                                     </h3>
 
-                                    <p className="text-xs leading-relaxed text-marrom sm:text-sm md:text-base">
+                                    <p className="text-xs leading-relaxed text-marrom tablet:text-sm desktop:text-lg">
                                         {feedback.comentario}
                                     </p>
                                 </article>
@@ -182,10 +182,10 @@ export default function CarrosselFeedbacks({
                     </div>
 
                     {/* Botão à esquerda e setas/bolinhas à direita, na mesma linha */}
-                    <div className="flex items-center gap-x-3 gap-y-2 sm:gap-x-5">
+                    <div className="flex items-center gap-x-3 gap-y-2 tablet:gap-x-5 desktop:gap-x-8">
                         <button
                             type="button"
-                            className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md bg-rosa-principal px-2.5 py-1.5 text-[11px] font-bold text-white shadow-md transition-colors hover:bg-rosa-secundario focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rosa-principal sm:px-4 sm:py-2.5 sm:text-sm"
+                            className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md bg-rosa-principal px-2.5 py-1.5 text-[11px] font-bold text-white shadow-md transition-colors hover:bg-rosa-secundario focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rosa-principal tablet:px-4 tablet:py-2.5 tablet:text-sm desktop:px-6 desktop:py-3 desktop:text-base"
                         >
                             <IconShoppingCart size={16} aria-hidden="true" />
                             Comprar
@@ -213,8 +213,8 @@ export default function CarrosselFeedbacks({
                                     >
                                         <span
                                             className={`block rounded-full transition-all mx-[1px] ${i === indice
-                                                ? "h-2.5 w-2.5 bg-rosa-principal"
-                                                : "h-1.5 w-1.5 bg-rosa-secundario"
+                                                ? "h-2.5 w-2.5 bg-rosa-principal tablet:h-3 tablet:w-3 desktop:h-3.5 desktop:w-3.5"
+                                                : "h-1.5 w-1.5 bg-rosa-secundario tablet:h-2 tablet:w-2 desktop:h-2.5 desktop:w-2.5"
                                                 }`}
                                         />
                                     </button>

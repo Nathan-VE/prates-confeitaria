@@ -41,7 +41,7 @@ export default function CardAcoesRapidas() {
 
     return (
         <div
-            className={`flex h-[270px] w-full flex-col overflow-hidden text-white ${painelMontado ? `` : `items-center justify-between pt-[95px]`
+            className={`flex h-[270px] w-full flex-col overflow-hidden text-white tablet:h-[340px] desktop:h-[420px] ${painelMontado ? `` : `items-center justify-between pt-[95px] tablet:pt-[120px] desktop:pt-[160px]`
                 }`}
         >
 
@@ -52,6 +52,10 @@ export default function CardAcoesRapidas() {
                         flex
                         h-[70px]
                         w-[200px]
+                        tablet:h-[90px]
+                        tablet:w-[280px]
+                        desktop:h-[110px]
+                        desktop:w-[360px]
                         flex-col
                         items-center
                         justify-center
@@ -61,6 +65,8 @@ export default function CardAcoesRapidas() {
                         py-[10px]
                         pl-[20px]
                         text-[24px]
+                        tablet:text-[32px]
+                        desktop:text-[40px]
                         leading-[0.9]
                         backdrop-blur-[13px]
 
@@ -95,6 +101,8 @@ export default function CardAcoesRapidas() {
                     className={`
                         flex
                         w-[270px]
+                        tablet:w-[340px]
+                        desktop:w-[420px]
                         items-end
                         justify-end
 
@@ -103,13 +111,13 @@ export default function CardAcoesRapidas() {
                         : ""}
 
                         ${painelMontado && !painelVisivel
-                        ? "translate-y-[170px]"
+                        ? "translate-y-[170px] tablet:translate-y-[240px] desktop:translate-y-[320px]"
                         : "translate-y-0"}
                     `}
                 >
                     {/* BOTÃO ABRIR / FECHAR */}
                     <button
-                        className="w-[70px] rounded-[15px_15px_0_0] bg-rosa-secundario p-[3px_20px] text-marrom"
+                        className="w-[70px] rounded-[15px_15px_0_0] bg-rosa-secundario p-[3px_20px] text-marrom tablet:w-[90px] desktop:w-[110px]"
                         onClick={alternar}
                     >
                         {aberto ? <IconChevronDown /> : <IconChevronUp />}
@@ -121,15 +129,20 @@ export default function CardAcoesRapidas() {
                         className={`
                             flex
                             w-[270px]
+                            tablet:w-[340px]
+                            desktop:w-[420px]
                             flex-1
                             flex-col
                             items-center
                             justify-end
                             gap-[20px]
+                            tablet:gap-[28px]
                             rounded-[15px_0_0]
                             bg-[url('/imagens/fundo-estampado.png')]
                             bg-cover
                             p-[10px_20px_20px]
+                            tablet:p-[14px_28px_28px]
+                            desktop:p-[18px_36px_36px]
                             text-center
                             font-sans
                             
@@ -144,19 +157,19 @@ export default function CardAcoesRapidas() {
                         `}
                     >
                         {/* DESCRIÇÃO */}
-                        <div className="rounded-[7px] border-white/30 p-[5px] bg-azul-secundario ">
-                            <h3 className="text-[13px] text-marrom">
+                        <div className="rounded-[7px] border-white/30 p-[5px] bg-azul-secundario tablet:p-[8px] desktop:p-[12px]">
+                            <h3 className="text-[13px] text-marrom tablet:text-[16px] desktop:text-[20px]">
                                 Desde<strong> 2023</strong>, criando<strong> doces momentos! 💗</strong>  Conheça nossos <strong>produtos</strong> e deixe seu dia <strong>mais doce</strong>.
                             </h3>
                         </div>
 
                         {/* BOTÕES */}
-                        <div className="flex w-full flex-row items-center justify-between gap-[20px] text-[11px] font-bold">
-                            <button className="w-[100px] rounded-full bg-azul-secundario py-[12px] text-rosa-principal">
+                        <div className="flex w-full flex-row items-center justify-between gap-[20px] text-[11px] font-bold tablet:text-[14px] desktop:text-[16px]">
+                            <button className="w-[100px] rounded-full bg-azul-secundario py-[12px] text-rosa-principal tablet:w-[130px] tablet:py-[14px] desktop:w-[170px] desktop:py-[16px]">
                                 CONTATO
                             </button>
 
-                            <button className="w-[100px] rounded-full bg-rosa-principal py-[12px] text-marrom">
+                            <button className="w-[100px] rounded-full bg-rosa-principal py-[12px] text-marrom tablet:w-[130px] tablet:py-[14px] desktop:w-[170px] desktop:py-[16px]">
                                 CARDÁPIO
                             </button>
                         </div>

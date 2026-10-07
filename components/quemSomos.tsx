@@ -63,16 +63,16 @@ export default function QuemSomos() {
     return (
         // relative: a imagem se posiciona em relação a esta section.
         // Sem overflow-hidden, para a imagem poder vazar para cima.
-        <section className="relative flex flex-row items-center justify-center gap-[40px]">
+        <section className="relative flex flex-row items-center justify-center gap-[40px] tablet:gap-[60px] desktop:gap-[100px]">
             <div className="flex w-full flex-col">
-                <div className="bg-rosa-secundario p-[20px] pt-[50px]">
-                    <h1 className="pointer-events-none max-w-[170px] origin-bottom scale-y-[1.25] animate-subir text-[40px] font-bold leading-[0.9] tracking-tight text-marrom">
+                <div className="bg-rosa-secundario p-[20px] pt-[50px] tablet:p-[40px] tablet:pt-[70px] desktop:p-[60px] desktop:pt-[90px]">
+                    <h1 className="pointer-events-none max-w-[170px] origin-bottom scale-y-[1.25] animate-subir text-[40px] font-bold leading-[0.9] tracking-tight text-marrom tablet:max-w-[320px] tablet:text-[64px] desktop:max-w-[520px] desktop:text-[96px]">
                         O doce sabor do Amor
                     </h1>
                 </div>
 
                 <div>
-                    <p className="max-w-[170px] p-[10px_20px] text-[12px] text-marrom">
+                    <p className="max-w-[170px] p-[10px_20px] text-[12px] text-marrom tablet:max-w-[320px] tablet:p-[16px_40px] tablet:text-[18px] desktop:max-w-[520px] desktop:p-[24px_60px] desktop:text-[22px]">
                         &quot;Com mais de 3 anos de experiência, sabemos que não há
                         ingrediente mais saboroso do que o amor.&quot;
                     </p>

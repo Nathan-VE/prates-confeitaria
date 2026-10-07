@@ -87,10 +87,12 @@ export default function Home() {
         <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[30px] mb-[50px]">
           <CarrosselFeedbacks feedbacks={feedbacks} />
         </section>
+
         <QuemSomos />
-        <div className="p-[20px] bg-[url('/imagens/fundo-estampado.png')] bg-cover"></div>
+          <div className="p-[20px] bg-[url('/imagens/fundo-estampado.png')] bg-cover"></div>
         <Contato />
       </main>
+      
       <footer>
         <Footer />
       </footer>

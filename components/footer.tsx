@@ -9,9 +9,9 @@ const ANO_ATUAL = new Date().getFullYear();
 
 export default function Footer() {
     return (
-        <aside className="flex flex-col items-center justify-center font-sans w-full gap-[20px] bg-rosa-principal px-5 py-8 text-white">
+        <aside className="flex flex-col items-center justify-center font-sans w-full gap-[20px] bg-rosa-principal px-5 py-8 text-white tablet:gap-[30px] tablet:px-10 tablet:py-12 desktop:gap-[40px] desktop:px-20 desktop:py-16">
 
-            <div className="grid grid-cols-2 grid-rows-2 gap-[20px]">
+            <div className="grid grid-cols-2 grid-rows-2 gap-[20px] tablet:gap-[40px] desktop:grid-cols-4 desktop:grid-rows-1 desktop:gap-[60px]">
                 {/* Logo */}
                 <div className="flex items-center justify-center">
                     <Link href="/" aria-label="Página inicial da Prates Confeitaria">
@@ -20,13 +20,13 @@ export default function Footer() {
                             alt="Prates Confeitaria"
                             width={170}
                             height={110}
-                            className="h-auto w-[110px] object-contain md:w-[130px] lg:w-[150px]"
+                            className="h-auto w-[110px] object-contain tablet:w-[130px] desktop:w-[150px]"
                         />
                     </Link>
                 </div>
 
                 {/* Navegação */}
-                <nav className="flex flex-col gap-[15px] text-sm">
+                <nav className="flex flex-col gap-[15px] text-sm tablet:text-base desktop:text-lg">
                     <h2 className="mb-1 font-bold">Navegação</h2>
 
                     <div className="flex flex-col gap-[5px]">
@@ -45,7 +45,7 @@ export default function Footer() {
                 </nav>
 
                 {/* Contato */}
-                <div className="flex flex-col gap-[15px] text-sm">
+                <div className="flex flex-col gap-[15px] text-sm tablet:text-base desktop:text-lg">
                     <h2 className="font-bold">Fale conosco</h2>
 
                     <div className="flex flex-col gap-[5px]">
@@ -72,10 +72,10 @@ export default function Footer() {
                 </div>
 
                 {/* Mensagem da marca */}
-                <div className="flex flex-col gap-[15px] text-sm">
+                <div className="flex flex-col gap-[15px] text-sm tablet:text-base desktop:text-lg">
                     <h2 className="font-bold">Feito com carinho</h2>
 
-                    <p className="max-w-[260px] leading-relaxed">
+                    <p className="max-w-[260px] leading-relaxed tablet:max-w-[320px]">
                         Doces preparados para transformar momentos especiais em
                         lembranças deliciosas.
                     </p>
@@ -83,7 +83,7 @@ export default function Footer() {
             </div>
 
             {/* Direitos reservados */}
-            <div className="col-span-5 row-span-1 flex items-center justify-center border-t border-white/30 pt-4 text-center text-xs lg:col-span-10">
+            <div className="col-span-5 row-span-1 flex items-center justify-center border-t border-white/30 pt-4 text-center text-xs tablet:text-sm desktop:col-span-10 desktop:text-base">
                 <p>
                     © {ANO_ATUAL} Prates Confeitaria. Todos os direitos reservados.
                 </p>
