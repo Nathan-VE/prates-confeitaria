@@ -47,8 +47,8 @@ function ImagemQuemSomos() {
             }`}
         >
             <Image
-                src="/imagens/lucas-e-rayanne.png"
-                alt="Foto do Lucas e da Rayanne se abraçando."
+                src="/imagens/confeiteira.png"
+                alt="Confeiteira segurando uma fatia do bolo de morango"
                 width={670} // troque pelas dimensões reais do arquivo
                 height={782} // troque pelas dimensões reais do arquivo
                 quality={100}
