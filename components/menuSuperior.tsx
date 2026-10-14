@@ -143,7 +143,7 @@ export default function MenuSuperior() {
     const direita = LINKS.slice(2);
 
     const classeLink =
-        "whitespace-nowrap font-sans text-[16px] font-semibold text-rosa-principal transition-opacity hover:opacity-70";
+        "whitespace-nowrap font-sans text-[20px] font-semibold text-rosa-principal transition-opacity hover:opacity-60";
 
     return (
         <div className="fixed left-0 top-0 z-[9999] w-full bg-rosa-secundario">
