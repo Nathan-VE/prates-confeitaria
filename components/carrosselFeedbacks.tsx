@@ -185,7 +185,7 @@ export default function CarrosselFeedbacks({
                     <div className="flex items-center gap-x-3 gap-y-2 tablet:gap-x-5 desktop:gap-x-8">
                         <button
                             type="button"
-                            className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md bg-rosa-principal px-2.5 py-1.5 text-[11px] font-bold text-white shadow-md transition-colors hover:bg-rosa-secundario focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rosa-principal tablet:px-4 tablet:py-2.5 tablet:text-sm desktop:px-6 desktop:py-3 desktop:text-base"
+                            className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md bg-rosa-principal px-2.5 py-1.5 text-[11px] font-bold text-white shadow-md transition-colors hover:bg-rosa-secundario focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rosa-principal tablet:px-4 tablet:py-2.5 tablet:text-sm desktop:px-6 desktop:py-3 desktop:text-base cursor-pointer hover:opacity-80"
                         >
                             <IconShoppingCart size={16} aria-hidden="true" />
                             Comprar
@@ -197,7 +197,7 @@ export default function CarrosselFeedbacks({
                                     type="button"
                                     onClick={() => irPara(indice - 1)}
                                     aria-label="Feedback anterior"
-                                    className="rounded-full p-0.5 text-rosa-principal focus-visible:outline-2 focus-visible:outline-rosa-principal"
+                                    className="rounded-full p-0.5 text-rosa-principal focus-visible:outline-2 focus-visible:outline-rosa-principal "
                                 >
                                     <IconChevronLeft size={14} aria-hidden="true" />
                                 </button>
