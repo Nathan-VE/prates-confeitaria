@@ -37,7 +37,7 @@ const feedbacks: Feedback[] = [
     imagem: "/itens/bolo-namorados.png",
     textoAlternativo: "Bolo personalizado dia dos namorados.",
     titulo: "Me fez me sentir muito amada",
-    comentario: "Eu adorei que a personalização ficou exatamente como pedi!",
+    comentario: "'Eu adorei que a personalização ficou exatamente como pedi!'",
     diasAtras: 3,
     nota: 5
   },
@@ -46,7 +46,7 @@ const feedbacks: Feedback[] = [
     imagem: "/itens/bolo-maes.png",
     textoAlternativo: "",
     titulo: "Melhor presente possível para esse dia tão especial",
-    comentario: "Muito gostoso! Estava doce na medida certa, frutas frescas e a entrega foi pontual!",
+    comentario: "'Muito gostoso! Estava doce na medida certa, frutas frescas e a entrega foi pontual!'",
     diasAtras: 1,
     nota: 5
   },
@@ -55,7 +55,7 @@ const feedbacks: Feedback[] = [
     imagem: "/itens/coxinha.jpeg",
     textoAlternativo: "Coxinha de frango.",
     titulo: "Com certeza, é o melhor salgado da cidade",
-    comentario: "Não me lembro de uma coxinha tão boa como essa, crocante e MUITO recheada!",
+    comentario: "'Não me lembro de uma coxinha tão boa como essa, crocante e MUITO recheada!'",
     diasAtras: 10,
     nota: 5
   },
@@ -64,7 +64,7 @@ const feedbacks: Feedback[] = [
     imagem: "/itens/copo-felicidade.jpeg",
     textoAlternativo: "Copo da felicidade de uva.",
     titulo: "Feito para quem ama doce",
-    comentario: "Me senti nas nuvens, esse copo da felicidade valeu cada centavo!",
+    comentario: "'Me senti nas nuvens, esse copo da felicidade valeu cada centavo!'",
     diasAtras: 1,
     nota: 5
   },
@@ -77,8 +77,8 @@ export default function Home() {
       <Hero />
 
       <main className="flex w-full flex-col">
-        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px] animate-subir motion-reduce:animate-none desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:px-[60px]">
-          <h1 className="text-marrom text-[50px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7] animate-subir pointer-events-none">
+        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px] animate-subir motion-reduce:animate-none desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:px-[60px] desktop:my-[100px]">
+          <h1 className="text-marrom text-[50px] desktop:text-[100px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7] animate-subir pointer-events-none desktop:mb-[70px]">
             Nossas especialidades
           </h1>
           <ItensDestaque card={categorias} />
