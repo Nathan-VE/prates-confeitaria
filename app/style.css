@@ -78,7 +78,9 @@
 * {
   box-sizing: border-box;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 /*Font moderna e elegante. A.: Nathan V. Esposito*/
 body {
   font-family: "Cormorant Garamond", serif;

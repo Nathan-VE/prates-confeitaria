@@ -77,14 +77,14 @@ export default function Home() {
       <Hero />
 
       <main className="flex w-full flex-col">
-        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px] animate-subir motion-reduce:animate-none desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:px-[60px] desktop:my-[100px] desktop:mb-[130px]">
+        <section id="categorias" className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[50px] animate-subir motion-reduce:animate-none desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:px-[60px] desktop:my-[100px] desktop:mb-[130px]">
           <h1 className="text-marrom text-[50px] desktop:text-[100px] font-bold tracking-tight scale-y-[1.25] origin-bottom leading-[0.7] animate-subir pointer-events-none desktop:mb-[70px]">
             Nossas especialidades
           </h1>
           <ItensDestaque card={categorias} />
         </section>
 
-        <section className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[30px] mb-[50px] desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:px-[60px] desktop:mb-[130px]">
+        <section id="feedbacks" className="flex flex-col items-center justify-center gap-[40px] p-[20px] pt-[30px] mb-[50px] desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:px-[60px] desktop:mb-[130px]">
           <CarrosselFeedbacks feedbacks={feedbacks} />
         </section>
 

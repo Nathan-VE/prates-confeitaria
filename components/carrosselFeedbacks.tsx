@@ -183,13 +183,15 @@ export default function CarrosselFeedbacks({
 
                     {/* Botão à esquerda e setas/bolinhas à direita, na mesma linha */}
                     <div className="flex items-center justify-center gap-x-4 gap-y-2 tablet:gap-x-5 desktop:gap-x-8 desktop:mt-[40px] tablet:mt-[155px]">
-                        <button
+                        <a href="https://instadelivery.com.br/ateliepratesconfeitaria">
+                            <button
                             type="button"
                             className="flex shrink-0 items-center desktop:justify-center gap-1.5 desktop:w-[170px] desktop:h-[56px] whitespace-nowrap rounded-md bg-rosa-principal px-2.5 py-1.5 text-[11px] desktop:text-[20px] font-bold text-white shadow-md transition-colors hover:bg-rosa-secundario focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rosa-principal tablet:px-4 tablet:py-2.5 tablet:text-sm desktop:px-6 desktop:py-3 desktop:text-base cursor-pointer hover:opacity-80"
                         >
                             <IconShoppingCart size={16} aria-hidden="true" />   
                             Comprar
                         </button>
+                        </a>
 
                         {total > 1 && (
                             <div className="flex items-center">

@@ -76,9 +76,9 @@ export default function CardAcoesRapidas() {
                             ease-out
 
                             ${painelMontado || !carregado
-                            ? "-translate-x-full opacity-0"
-                            : "translate-x-0 opacity-100"
-                        }
+                                ? "-translate-x-full opacity-0"
+                                : "translate-x-0 opacity-100"
+                            }
                         `}
                     >
                         <h1>
@@ -107,12 +107,12 @@ export default function CardAcoesRapidas() {
                             justify-end
 
                             ${painelMontado && (painelVisivel || !aberto)
-                            ? "transition-transform duration-500 ease-out"
-                            : ""}
+                                ? "transition-transform duration-500 ease-out"
+                                : ""}
 
                             ${painelMontado && !painelVisivel
-                            ? "translate-y-[170px] tablet:translate-y-[240px]"
-                            : "translate-y-0"}
+                                ? "translate-y-[170px] tablet:translate-y-[240px]"
+                                : "translate-y-0"}
                         `}
                     >
                         {/* BOTÃO ABRIR / FECHAR */}
@@ -163,13 +163,17 @@ export default function CardAcoesRapidas() {
 
                             {/* BOTÕES */}
                             <div className="flex w-full flex-row items-center justify-between gap-[20px] text-[11px] font-bold tablet:text-[14px]">
-                                <button className="w-[100px] rounded-md bg-azul-secundario py-[12px] tablet:w-[130px] tablet:py-[14px]">
-                                    CONTATO
-                                </button>
+                                <a href="#contato">
+                                    <button className="w-[100px] rounded-md bg-azul-secundario py-[12px] tablet:w-[130px] tablet:py-[14px]">
+                                        CONTATO
+                                    </button>
+                                </a>
 
-                                <button className="w-[100px] rounded-md bg-rosa-principal py-[12px] tablet:w-[130px] tablet:py-[14px]">
-                                    CARDÁPIO
-                                </button>
+                                <a href="https://instadelivery.com.br/ateliepratesconfeitaria">
+                                    <button className="w-[100px] rounded-md bg-rosa-principal py-[12px] tablet:w-[130px] tablet:py-[14px]">
+                                        COMPRAR
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     )}
@@ -204,9 +208,9 @@ export default function CardAcoesRapidas() {
                         ease-out
 
                         ${!carregado
-                        ? "-translate-x-full opacity-0"
-                        : "translate-x-0 opacity-100"
-                    }
+                            ? "-translate-x-full opacity-0"
+                            : "translate-x-0 opacity-100"
+                        }
                     `}
                 >
                     {/* TÍTULO */}
@@ -223,15 +227,19 @@ export default function CardAcoesRapidas() {
 
                     {/* BOTÕES */}
                     <div className="flex w-full flex-row items-center gap-[20px] text-[16px] font-bold">
-                        <button className="flex justify-center items-center gap-[10px] w-[170px] rounded-md bg-azul-secundario py-[16px] cursor-pointer hover:opacity-80">
+                        <a href="#contato">
+                            <button className="flex justify-center items-center gap-[10px] w-[170px] rounded-md bg-azul-secundario py-[16px] cursor-pointer hover:opacity-80">
                             <IconBrandWhatsapp size={22} stroke={1.75} className="shrink-0" aria-hidden="true" />
                             CONTATO
                         </button>
+                        </a>
 
-                        <button className="flex justify-center items-center gap-[10px] w-[170px] rounded-md bg-rosa-principal py-[16px] cursor-pointer hover:opacity-80">
+                        <a href="https://instadelivery.com.br/ateliepratesconfeitaria">
+                            <button className="flex justify-center items-center gap-[10px] w-[170px] rounded-md bg-rosa-principal py-[16px] cursor-pointer hover:opacity-80">
                             <IconShoppingCart size={22} aria-hidden="true" />
                             COMPRAR
                         </button>
+                        </a>
                     </div>
                 </div>
             </div>

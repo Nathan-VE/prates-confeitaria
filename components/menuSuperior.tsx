@@ -9,10 +9,10 @@ import { obterAnoAtual } from "@/util/data";
 
 /* Ordem dos links: usada no menu mobile e no desktop. Troque o href quando criar as âncoras. */
 const LINKS = [
-    { texto: "Cardápio & Pedidos", href: "/" },
-    { texto: "Feedbacks", href: "/" },
-    { texto: "Sobre nós", href: "/" },
-    { texto: "Contato", href: "/" },
+    { texto: "Cardápio & Pedidos", href: "https://instadelivery.com.br/ateliepratesconfeitaria" },
+    { texto: "Feedbacks", href: "#feedbacks" },
+    { texto: "Sobre nós", href: "#sobreNos" },
+    { texto: "Contato", href: "#contato" },
 ];
 
 export default function MenuSuperior() {
@@ -87,8 +87,9 @@ export default function MenuSuperior() {
                 {/* OPÇÕES DO MENU */}
                 <div className="mb-[15px] flex w-full flex-1 flex-col gap-[20px] rounded-[25px] border-marrom bg-rosa-principal p-[25px_35px] font-sans text-[15px] font-semibold text-azul-secundario shadow-[0_0_15px_var(--cor-marrom)] tablet:gap-[28px] tablet:p-[40px_60px] tablet:text-[22px]">
 
+                    {/* Ao clicar em qualquer link, o menu fecha (mesmo onClick do botão fechar). */}
                     {LINKS.map((link) => (
-                        <a key={link.texto} href={link.href}>
+                        <a key={link.texto} href={link.href} onClick={onClick}>
                             <div className="flex w-full border-b hover:text-rosa-secundario">
                                 <h3>
                                     . {link.texto}

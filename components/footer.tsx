@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { IconBrandInstagram, IconBrandWhatsapp } from "@tabler/icons-react";
 
-const WHATSAPP_NUMERO = "5511999999999";
-const WHATSAPP_EXIBIDO = "(11) 99999-9999";
-const INSTAGRAM_URL = "https://www.instagram.com/";
+const WHATSAPP_NUMERO = "5514991721976"; // formato: 55 + DDD + número
+const WHATSAPP_EXIBIDO = "(14) 99172-1976";
+const INSTAGRAM_URL = "https://www.instagram.com/prates_confeitaria/";
 const ANO_ATUAL = new Date().getFullYear();
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="grid grid-cols-2 grid-rows-2 gap-[20px] tablet:gap-[40px] desktop:grid-cols-4 desktop:grid-rows-1 desktop:gap-[60px]">
                 {/* Logo */}
                 <div className="flex items-center justify-center">
-                    <Link href="/" aria-label="Página inicial da Prates Confeitaria">
+                    <Link href="#hero" aria-label="Página inicial da Prates Confeitaria">
                         <Image
                             src="/logo/logo-sem-fundo.png"
                             alt="Prates Confeitaria"
@@ -30,15 +30,15 @@ export default function Footer() {
                     <h2 className="mb-1 font-bold">Navegação</h2>
 
                     <div className="flex flex-col gap-[5px]">
-                        <Link href="/" className="transition-opacity hover:opacity-70">
-                        Início
+                        <Link href="#categorias" className="transition-opacity hover:opacity-70">
+                        Categorias
                     </Link>
 
-                    <Link href="/#especialidades" className="transition-opacity hover:opacity-70">
-                        Nossas especialidades
+                    <Link href="#feedbacks" className="transition-opacity hover:opacity-70">
+                        Feedbacks
                     </Link>
 
-                    <Link href="/#contato" className="transition-opacity hover:opacity-70">
+                    <Link href="#contato" className="transition-opacity hover:opacity-70">
                         Contato
                     </Link>
                     </div>
@@ -50,7 +50,7 @@ export default function Footer() {
 
                     <div className="flex flex-col gap-[5px]">
                         <a
-                        href={`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent("Olá! Gostaria de conhecer os produtos da Prates Confeitaria.")}`}
+                        href={`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent("Olá! Venho pelo site e gostaria de conhecer as delícias da Prates Confeitaria.")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 transition-opacity hover:opacity-70"
