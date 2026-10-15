@@ -6,6 +6,7 @@ import CarrosselFeedbacks, { Feedback } from "@/components/carrosselFeedbacks";
 import QuemSomos from "@/components/quemSomos";
 import Contato from "@/components/contato";
 import Footer from "@/components/footer";
+import ContatoFlutuante from "@/components/contatoFlutuante";
 
 const categorias = [
   <CardCategoria
@@ -97,6 +98,8 @@ export default function Home() {
       <footer>
         <Footer />
       </footer>
+
+      <ContatoFlutuante />
     </>
   );
 }
