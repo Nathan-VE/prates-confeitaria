@@ -101,7 +101,7 @@ export default function Contato() {
     return (
         <section className="flex flex-col gap-[24px] p-[20px] pt-[50px] tablet:gap-[32px] tablet:p-[40px] tablet:pt-[70px] desktop:mx-auto desktop:w-full desktop:max-w-[1100px] desktop:gap-[40px] desktop:p-[60px] desktop:pt-[90px]">
             {/* Título: sem font-sans, mantém a fonte do projeto */}
-            <h2 className="pointer-events-none origin-left scale-y-[1.25] text-[40px] font-bold leading-[0.9] tracking-tight text-marrom mb-[20px] tablet:text-[56px] desktop:text-[72px]">
+            <h2 className="pointer-events-none origin-left scale-y-[1.25] text-[40px] desktop:text-[100px] font-bold leading-[0.9] tracking-tight text-marrom mb-[20px] tablet:text-[56px] desktop:text-[72px]">
                 Onde nos encontrar
             </h2>
 
@@ -122,7 +122,7 @@ export default function Contato() {
 
                     <div className="flex flex-row gap-[10px] text-[10px] tablet:text-[14px] desktop:text-[16px]">
                         <a
-                            href={`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent("Olá! Gostaria de conhecer melhor os produtos da Prates Confeitaria.")}`}
+                            href={`https://wa.me/${WHATSAPP_NUMERO}?text=${encodeURIComponent("Olá! Venho pelo site e gostaria de conhecer melhor os produtos da Prates Confeitaria.")}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-[8px] rounded-[10px] px-[12px] py-[7px] tablet:px-[16px] tablet:py-[10px] desktop:px-[20px] desktop:py-[12px] bg-rosa-secundario"
@@ -134,7 +134,7 @@ export default function Contato() {
                 </div>
 
                 {/* Mapa + endereço */}
-                <div className="flex flex-col gap-[10px] tablet:gap-[14px]">
+                <div className="flex flex-col gap-[10px] tablet:gap-[14px] desktop:mt-[100px]">
                     <Mapa />
                     <address className="text-[12px] not-italic leading-snug text-marrom tablet:text-[14px] desktop:text-[16px]">
                         {ENDERECO}
