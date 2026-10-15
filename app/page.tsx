@@ -89,7 +89,7 @@ export default function Home() {
         </section>
 
         <QuemSomos />
-        <div className="p-[20px] bg-[url('/imagens/fundo-estampado.png')] bg-cover desktop:mx-auto desktop:w-[calc(100%-120px)] desktop:max-w-[980px]"></div>
+        <div className="p-[20px] bg-[url('/imagens/fundo-estampado.png')] bg-cover desktop:mx-auto desktop:w-[calc(100%-120px)] desktop:max-w-[980px] desktop:mb-[80px] desktop:rounded-b-md"></div>
 
         <Contato />
       </main>
