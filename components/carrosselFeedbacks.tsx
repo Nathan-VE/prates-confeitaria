@@ -153,7 +153,7 @@ export default function CarrosselFeedbacks({
                 </div>
 
                 {/* Coluna da direita: texto do cliente + linha fixa com botão e controles */}
-                <div className="flex min-w-0 flex-1 flex-col tablet:gap-6 desktop:gap-8">
+                <div className="flex min-w-0 flex-1 flex-col justify-between desktop:h-full tablet:h-full  tablet:gap-6 desktop:gap-8">
                     <div className="overflow-hidden">
                         <div
                             className={CLASSE_TRILHO}
@@ -182,12 +182,12 @@ export default function CarrosselFeedbacks({
                     </div>
 
                     {/* Botão à esquerda e setas/bolinhas à direita, na mesma linha */}
-                    <div className="flex items-center gap-x-3 gap-y-2 tablet:gap-x-5 desktop:gap-x-8">
+                    <div className="flex items-center justify-center gap-x-4 gap-y-2 tablet:gap-x-5 desktop:gap-x-8 desktop:mt-[40px] tablet:mt-[155px]">
                         <button
                             type="button"
-                            className="flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md bg-rosa-principal px-2.5 py-1.5 text-[11px] font-bold text-white shadow-md transition-colors hover:bg-rosa-secundario focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rosa-principal tablet:px-4 tablet:py-2.5 tablet:text-sm desktop:px-6 desktop:py-3 desktop:text-base cursor-pointer hover:opacity-80"
+                            className="flex shrink-0 items-center desktop:justify-center gap-1.5 desktop:w-[170px] desktop:h-[56px] whitespace-nowrap rounded-md bg-rosa-principal px-2.5 py-1.5 text-[11px] desktop:text-[20px] font-bold text-white shadow-md transition-colors hover:bg-rosa-secundario focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rosa-principal tablet:px-4 tablet:py-2.5 tablet:text-sm desktop:px-6 desktop:py-3 desktop:text-base cursor-pointer hover:opacity-80"
                         >
-                            <IconShoppingCart size={16} aria-hidden="true" />
+                            <IconShoppingCart size={16} aria-hidden="true" />   
                             Comprar
                         </button>
 
@@ -197,7 +197,7 @@ export default function CarrosselFeedbacks({
                                     type="button"
                                     onClick={() => irPara(indice - 1)}
                                     aria-label="Feedback anterior"
-                                    className="rounded-full p-0.5 text-rosa-principal focus-visible:outline-2 focus-visible:outline-rosa-principal "
+                                    className="rounded-full p-0.5 desktop:p-[20px] text-rosa-principal focus-visible:outline-2 focus-visible:outline-rosa-principal cursor-pointer"
                                 >
                                     <IconChevronLeft size={14} aria-hidden="true" />
                                 </button>
@@ -212,7 +212,7 @@ export default function CarrosselFeedbacks({
                                         className="flex items-center justify-center rounded-full focus-visible:outline-2 focus-visible:outline-rosa-principal"
                                     >
                                         <span
-                                            className={`block rounded-full transition-all mx-[1px] ${i === indice
+                                            className={`block rounded-full transition-all mx-[1px] desktop:mx-[5px] cursor-pointer ${i === indice
                                                 ? "h-2.5 w-2.5 bg-rosa-principal tablet:h-3 tablet:w-3 desktop:h-3.5 desktop:w-3.5"
                                                 : "h-1.5 w-1.5 bg-rosa-secundario tablet:h-2 tablet:w-2 desktop:h-2.5 desktop:w-2.5"
                                                 }`}
@@ -224,7 +224,7 @@ export default function CarrosselFeedbacks({
                                     type="button"
                                     onClick={() => irPara(indice + 1)}
                                     aria-label="Próximo feedback"
-                                    className="rounded-full p-0.5 text-rosa-principal focus-visible:outline-2 focus-visible:outline-rosa-principal"
+                                    className="rounded-full p-0.5 desktop:p-[20px] text-rosa-principal focus-visible:outline-2 focus-visible:outline-rosa-principal cursor-pointer"
                                 >
                                     <IconChevronRight size={14} aria-hidden="true" />
                                 </button>
